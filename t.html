@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        // 1. url
+        // 2. 请求传给web服务器的参数
+        // 3. success()
+        // 4. 返回数据的解析方式
+        $.get("data.json", {"name": "tom"}, function(data){
+            alert(data.name);
+        }, "JSON").error(function(){
+            alert("请求失败");
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>apple</li>
+        <li>pear</li>
+        <li>ballana</li>
+    </ul>
+</body>
+</html>
